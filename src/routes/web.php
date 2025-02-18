@@ -13,5 +13,5 @@ use App\Http\Controllers\MogitateController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-s
-Route::get('/products' [MogitateController::class, 'index']);
+
+Route::get('/products', [MogitateController::class, 'index']);

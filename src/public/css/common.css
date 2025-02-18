@@ -1,11 +1,16 @@
 .header{
-
+    background-color: #FFFFFF;
+    max-width: 1512px;
 }
 
-.header__inner{
-
+.header_inner{
+    height: 53px;
 }
 
 .header__logo{
-
+    text-decoration: none;
+    color: #F5C800;
+    font-size: 30px;
+    font-family: "Times New Roman", "游明朝", "Yu Mincho", "游明朝体", "YuMincho", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳＰ明朝", "MS PMincho", serif;
+    font-style: italic;
 }
