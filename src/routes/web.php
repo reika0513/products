@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MogitateController;
+use App\Http\Controllers\ProductsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,5 @@ use App\Http\Controllers\MogitateController;
 |
 */
 
-Route::get('/products', [MogitateController::class, 'index']);
+Route::get('/products', [ProductsController::class, 'index']);
+Route::get('/products/register', [ProductsController::class, 'register']);
