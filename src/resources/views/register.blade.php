@@ -47,7 +47,8 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <!-- 商品画像挿入ボタン -->
+                        <img id="preview">
+                        <input class="form_group-text_picture" type="file" name="picture" value="{{ old('picture') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->
@@ -62,13 +63,13 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text_seasons">
-                        <input type="radio" name="season" value="1">
+                        <input type="checkbox" name="season" value="1">
                             <label class="form_group-text_seasons-label" for="spring" name="season" value="春">春</label>
-                            <input type="radio" name="season" value="2">
+                            <input type="checkbox" name="season" value="2">
                             <label class="form_group-text_seasons-label" for="summer" name="season" value="夏">夏</label>
-                            <input type="radio" name="season" value="3">
+                            <input type="checkbox" name="season" value="3">
                             <label class="form_group-text_seasons-label" for="fall" name="season" value="秋">秋</label> 
-                            <input type="radio" name="season" value="4">
+                            <input type="checkbox" name="season" value="4">
                             <label class="form_group-text_seasons-label" for="winter" name="season" value="冬">冬</label>      
                     </div>
                     <div class="form_error">
@@ -83,7 +84,7 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <textarea class="form_group-text_content" name="content" cols="80" rows="6" placeholder="商品説明を入力">{{ old('content') }}</textarea>
+                        <textarea class="form_group-text_content" name="content" cols="80" rows="8" placeholder="商品説明を入力">{{ old('content') }}</textarea>
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->
@@ -96,5 +97,14 @@
             <button class="form__button-submit" type="submit">登録</button>
         </div>
     </form>
-</div>
+</div>]
+<script>
+  function previewFile(hoge){
+    var fileData = new FileReader();
+    fileData.onload = (function() {
+      document.getElementById('preview').src = fileData.result;
+    });
+    fileData.readAsDataURL(hoge.files[0]);
+  }
+  </script>
 @endsection
