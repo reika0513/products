@@ -8,7 +8,8 @@ use App\Models\Products;
 class ProductsController extends Controller
 {
     public function index(){
-        return view('index');
+        $products=Products::all();
+        return view('index', compact('products'));
     }
 
     public function register(){
@@ -16,8 +17,8 @@ class ProductsController extends Controller
     }
 
     public function store(Request $request){
-        $products = $request->only(['name', 'price', 'image', 'description']);
-        Products::create($products);
+        $product = $request->only(['name', 'price', 'image', 'description']);
+        Products::create($product);
         return view('index');
     }
 }

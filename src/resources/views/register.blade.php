@@ -9,7 +9,7 @@
     <div class="products_heading">
         <h1 class="products_heading-logo">商品登録</h1>
     </div>
-    <form class="form" action="/products" method="post">
+    <form class="form" action="/products/register" method="post">
         @csrf
         <div class="form_frame">
             <div class="form_group">
@@ -48,7 +48,7 @@
                 <div class="form_group-content">
                     <div class="form_group-text">
                         <img id="preview">
-                        <input class="form_group-text_picture" type="file" name="picture" value="{{ old('picture') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
+                        <input class="form_group-text_image" type="file" name="image" value="{{ old('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->
@@ -84,7 +84,7 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <textarea class="form_group-text_content" name="content" cols="80" rows="8" placeholder="商品説明を入力">{{ old('content') }}</textarea>
+                        <textarea class="form_group-text_content" name="content" cols="80" rows="8" placeholder="商品説明を入力">{{ old('description') }}</textarea>
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->
