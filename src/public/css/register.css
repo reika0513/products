@@ -1,3 +1,110 @@
+.products_register{
+    background-color: #F8F8F8;
+    padding: 70px 376px;
+    height: 930px;
+    max-width: 1512px;
+}
+
+.form_frame, .form_group{
+    margin-top: 30px;
+}
+
+.form_group-content{
+    margin-top: 10px;
+}
+
+.form_group-title{
+    font-size: 16px;
+    height: 24px;
+}
+
+.form__label--required{
+    width: 34px;
+    padding: 0 5px;
+    margin-left: 10px;
+    background-color: #FD0707;
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.form__label--message{
+    font-size: 12px;
+    margin-left: 10px;
+    color: #FD0707;
+}
+
+.form_group-text_picture{
+    
+    width: 374px;
+}
+
+.form_group-text_picture{
+    border: none;
+    height: 43px;
+}
+
+.form_group-text_seasons{
+    width: 314px;
+    height: 43px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type="checkbox"] {
+    height: 18px;
+    width: 18px;
+    margin: 8px 0 5px 0;
+    border: solid 1px #ffffff;
+    accent-color: #000000;
+}
+
+.form_group-text_seasons-label{
+    width: 41px;
+    margin: 5px 0;
+}
+
+input[type=checkbox]:checked+.label_test:before {
+    opacity: 1;
+}
+
+.form_group-text_name, .form_group-text_price{
+    height: 43px;
+    width: 760px;
+    border: solid 1px #E0DFDE;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 5px;
+}
+
 .form_group-text_content{
+    width: 760px;
+    border: solid 1px #E0DFDE;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 11px 10px;
     resize: none;
+}
+
+.form_button{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form__button-back, .form__button-submit{
+    height: 50px;
+    width: 200px;
+    margin: 0px 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 4px 10px #0000001a;
+}
+
+.form__button-back{
+    background-color: #E0DFDE;
+
+}
+
+.form__button-submit{
+    background-color: #F5C800;
 }

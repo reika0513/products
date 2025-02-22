@@ -9,7 +9,7 @@
     <div class="products_heading">
         <h1 class="products_heading-logo">商品一覧</h1>
         <button class="products_heading_add">
-        <a class="products_heading_add-logo" href="/products/register">+ 商品追加</a>
+        <a class="products_heading_add-logo" href="/products/add">+ 商品追加</a>
         </button>
     </div>
     <div class="products_content">
