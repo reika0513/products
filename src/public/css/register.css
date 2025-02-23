@@ -1,7 +1,6 @@
 .products_register{
     background-color: #F8F8F8;
     padding: 70px 376px;
-    height: 930px;
     max-width: 1512px;
 }
 
@@ -33,12 +32,8 @@
     color: #FD0707;
 }
 
-.form_group-text_picture{
-    
+.form_group-text_image{
     width: 374px;
-}
-
-.form_group-text_picture{
     border: none;
     height: 43px;
 }
@@ -76,13 +71,19 @@ input[type=checkbox]:checked+.label_test:before {
     padding: 5px;
 }
 
-.form_group-text_content{
+.form_group-text_description{
     width: 760px;
     border: solid 1px #E0DFDE;
     border-radius: 5px;
     font-size: 14px;
     padding: 11px 10px;
     resize: none;
+}
+
+.form_error{
+    color: #FD0707;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 .form_button{

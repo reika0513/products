@@ -5,5 +5,108 @@
 @endsection
 
 @section('content')
-
+<div class="products_detail"> 
+    <form class="form" action="/products/register" method="post">
+    @csrf
+    <div class="form_frame">
+            <p>
+                <span class="products_heading_logo">商品一覧</span>
+                <span class="products_heading_logo-a">></span>
+            </p>
+        <div class="products_detail-content">
+            <div class="products_detail_image">
+                <div class="form_group">
+                    <div class="form_group-content">
+                        <div class="form_group-text">
+                            <img class="form_group-text_preview" id="preview">
+                            <input class="form_group-text_image" type="file" name="image" value="{{ old('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
+                        </div>
+                        <div class="form_error">
+                            @error('image')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products_detail-information">
+                <div class="form_group">
+                    <p class="form_group-title">商品名</p>
+                    <div class="form_group-content">
+                        <div class="form_group-text">
+                            <input class="form_group-text_name" type="text" name="name" placeholder="商品名を入力" value="{{ old('name') }}">
+                        </div>
+                        <div class="form_error">
+                            @error('name')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <p class="form_group-title">値段</p>
+                    <div class="form_group-content">
+                        <div class="form_group-text">
+                            <input class="form_group-text_price" type="text" name="price" placeholder="値段を入力" value="{{ old('price')}}">
+                        </div>
+                        <div class="form_error">
+                            @error('price')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+                <div class="form_group">
+                    <p class="form_group-title">季節</p>
+                    <div class="form_group-content">
+                        <div class="form_group-text_seasons">
+                            <input type="checkbox" name="season" value="1">
+                                <label class="form_group-text_seasons-label" for="spring" name="season" value="春">春</label>
+                                <input type="checkbox" name="season" value="2">
+                                <label class="form_group-text_seasons-label" for="summer" name="season" value="夏">夏</label>
+                                <input type="checkbox" name="season" value="3">
+                                <label class="form_group-text_seasons-label" for="fall" name="season" value="秋">秋</label> 
+                                <input type="checkbox" name="season" value="4">
+                                <label class="form_group-text_seasons-label" for="winter" name="season" value="冬">冬</label>      
+                        </div>
+                        <div class="form_error">
+                            @error('season')
+                            {{ $message }}
+                            @enderror
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="products_detail-description">
+            <div class="form_group">
+                <p class="form_group-title">商品説明</p>
+                <div class="form_group-content">
+                    <div class="form_group-text">
+                        <textarea class="form_group-text_description" name="description" placeholder="商品説明を入力" value="{{ old('description') }}" rows="10" cols="110"></textarea>
+                    </div>
+                    <div class="form_error">
+                        @error('description')
+                        {{ $message }}
+                        @enderror
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form_button">
+            <button class="form__button-back" type="button" onClick="history.back()">戻る</button>
+            <button class="form__button-submit" type="submit">更新</button>
+        </div>
+    </div>
+    </form>
+</div>
+<script>
+  function previewFile(hoge){
+    var fileData = new FileReader();
+    fileData.onload = (function() {
+      document.getElementById('preview').src = fileData.result;
+    });
+    fileData.readAsDataURL(hoge.files[0]);
+  }
+  </script>
 @endsection

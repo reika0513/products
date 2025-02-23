@@ -19,10 +19,12 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_name" type="text" name="name" placeholder="商品名を入力" value="{{ $product ('name') }}">
+                        <input class="form_group-text_name" type="text" name="name" placeholder="商品名を入力" value="{{ old('name') }}">
                     </div>
                     <div class="form_error">
-                        <!-- バリテーション挿入-->
+                        @error('name')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -33,10 +35,12 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_price" type="text" name="price" placeholder="値段を入力" value="{{ $product ('price') }}">
+                        <input class="form_group-text_price" type="text" name="price" placeholder="値段を入力" value="{{ old('price') }}">
                     </div>
                     <div class="form_error">
-                        <!-- バリテーション挿入-->
+                        @error('price')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -47,11 +51,13 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <img id="preview">
-                        <input class="form_group-text_image" type="file" name="image" value="{{ $product ('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
+                        <img class="form_group-text_preview" id="preview">
+                        <input class="form_group-text_image" type="file" name="image" value="{{ old('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
                     </div>
                     <div class="form_error">
-                        <!-- バリテーション挿入-->
+                        @error('image')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
@@ -73,8 +79,10 @@
                             <label class="form_group-text_seasons-label" for="winter" name="season" value="冬">冬</label>      
                     </div>
                     <div class="form_error">
-                        <!-- バリテーション挿入-->
-                    </div>
+                        @error('season')
+                        {{ $message }}
+                        @enderror
+                   </div>
                 </div>
             </div>
             <div class="form_group">
@@ -84,10 +92,12 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <textarea class="form_group-text_content" name="content" cols="80" rows="8" placeholder="商品説明を入力">{{ $product ('content') }}</textarea>
+                        <textarea class="form_group-text_description" name="description" placeholder="商品説明を入力" value="{{ old('description') }}" rows="10" cols="110"></textarea>
                     </div>
                     <div class="form_error">
-                        <!-- バリテーション挿入-->
+                        @error('description')
+                        {{ $message }}
+                        @enderror
                     </div>
                 </div>
             </div>
