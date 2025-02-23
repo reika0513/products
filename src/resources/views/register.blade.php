@@ -19,7 +19,7 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_name" type="text" name="name" placeholder="商品名を入力" value="{{ old('name') }}">
+                        <input class="form_group-text_name" type="text" name="name" placeholder="商品名を入力" value="{{ $product ('name') }}">
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->
@@ -33,7 +33,7 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <input class="form_group-text_price" type="text" name="price" placeholder="値段を入力" value="{{ old('price') }}">
+                        <input class="form_group-text_price" type="text" name="price" placeholder="値段を入力" value="{{ $product ('price') }}">
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->
@@ -48,7 +48,7 @@
                 <div class="form_group-content">
                     <div class="form_group-text">
                         <img id="preview">
-                        <input class="form_group-text_image" type="file" name="image" value="{{ old('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
+                        <input class="form_group-text_image" type="file" name="image" value="{{ $product ('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->
@@ -84,7 +84,7 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <textarea class="form_group-text_content" name="content" cols="80" rows="8" placeholder="商品説明を入力">{{ old('description') }}</textarea>
+                        <textarea class="form_group-text_content" name="content" cols="80" rows="8" placeholder="商品説明を入力">{{ $product ('content') }}</textarea>
                     </div>
                     <div class="form_error">
                         <!-- バリテーション挿入-->

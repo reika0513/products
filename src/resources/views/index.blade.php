@@ -21,15 +21,16 @@
                 </form>
                 <!-- 並び替えボタンの設置 -->
         </div>
-        @foreach ($products as $product)
         <div class="products_content-main">
             <table class="products_table">
-                <th>{{ $product['image'] }}<!-- 画像挿入 --></th>
-                <td>{{ $product['name'] }}<!-- 商品名挿入 --></td>
-                <td>{{ $product['price'] }}<!-- 金額挿入 --></td>
+                <div class="products_table-item">
+                    <th class="item_name"><p>{{ $product ['name'] }}</p></th>
+                    <td class="item_name"><p>{{ $product ['price'] }}</p></td>
+                    <td class="item_image"><p>{{ $product ['image'] }}</p></td>
+                    <td class="item_price"><p>{{ $product ['content'] }}</p></td>
+                </div>
             </table>
         </div>
-        @endforeach
     </div>
 </div>
 @endsection

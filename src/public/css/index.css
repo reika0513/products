@@ -35,6 +35,7 @@
 .products_content{
     margin-top: 30px;
     padding: 0px 40px;
+    display: flex;
 }
 
 .products_content-side{
@@ -47,6 +48,10 @@
     height: 114px;
     display: flex;
     flex-direction: column;
+}
+
+.products_table{
+    display: flex;
 }
 
 .products_content_search-input{

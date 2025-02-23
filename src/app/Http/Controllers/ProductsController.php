@@ -7,7 +7,7 @@ use App\Models\Products;
 
 class ProductsController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $products=Products::all();
         return view('index', compact('products'));
     }
@@ -17,7 +17,7 @@ class ProductsController extends Controller
     }
 
     public function store(Request $request){
-        $product = $request->only(['name', 'price', 'image', 'description']);
+        $product = $request->only(['name', 'price', 'image', 'content']);
         Products::create($product);
         return view('index');
     }
