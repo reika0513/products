@@ -12,7 +12,7 @@ class ProductsController extends Controller
         return view('index', ['products' => $products]);
     }
 
-        public function register(){
+    public function register(){
         return view('register');
     }
 
@@ -21,7 +21,7 @@ class ProductsController extends Controller
     }
 
     public function create(ProductsRequest $request){
-        $products = $request->only(['name', 'price', 'image', 'description']);
+        $products = $request->only('name', 'price', 'image','description');
         Products::create($products);
         return redirect('/products');
     }

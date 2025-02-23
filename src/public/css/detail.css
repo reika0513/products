@@ -91,7 +91,7 @@ input[type=checkbox]:checked+.label_test:before {
 }
 
 .form__button-back,
-.form__button-submit {
+.form__button-update{
     height: 50px;
     width: 200px;
     margin: 0px 5px;
@@ -106,6 +106,13 @@ input[type=checkbox]:checked+.label_test:before {
 
 }
 
-.form__button-submit {
+.form__button-update {
     background-color: #F5C800;
+}
+
+.form__button-delete{
+    color: red;
+    font-weight: bold;
+    background-color: #ffffff00;
+    border: none;
 }

@@ -51,8 +51,8 @@
                 </div>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <img class="form_group-text_preview" id="preview">
-                        <input class="form_group-text_image" type="file" name="image" value="{{ old('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
+                        <img id="preview">
+                        <input class="form_group-text_image" type="file" name="image" accept="image/png, image/jpeg" value="{{ old('image') }}" onchange="previewFile(this);">
                     </div>
                     <div class="form_error">
                         @error('image')
@@ -107,7 +107,7 @@
             <button class="form__button-submit" type="submit">登録</button>
         </div>
     </form>
-</div>]
+</div>
 <script>
   function previewFile(hoge){
     var fileData = new FileReader();

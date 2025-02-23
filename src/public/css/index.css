@@ -29,7 +29,7 @@
     font-size: 16px;
     color: #4B4B4B;
     font-weight: 600;
-    text-decoration: none
+    text-decoration: none;
 }
 
 .products_content{
@@ -92,4 +92,9 @@
     justify-content: space-between;
     font-size: 24px;
     padding: 0px 20px;
+}
+
+.products_heading_update{
+    color: #4B4B4B;
+    text-decoration: none;
 }

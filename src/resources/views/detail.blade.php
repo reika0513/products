@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="products_detail"> 
-    <form class="form" action="/products/register" method="post">
+    <form class="form" action="/products/{productId}/update" method="post">
     @csrf
     <div class="form_frame">
             <p>
@@ -19,7 +19,7 @@
                     <div class="form_group-content">
                         <div class="form_group-text">
                             <img class="form_group-text_preview" id="preview">
-                            <input class="form_group-text_image" type="file" name="image" value="{{ old('image') }}" accept="image/png, image/jpeg" onchange="previewFile(this);">
+                            <input class="form_group-text_image" type="file" name="image" accept="image/png, image/jpeg" value="{{ old('image') }}" onchange="previewFile(this);">
                         </div>
                         <div class="form_error">
                             @error('image')
@@ -47,7 +47,7 @@
                     <p class="form_group-title">値段</p>
                     <div class="form_group-content">
                         <div class="form_group-text">
-                            <input class="form_group-text_price" type="text" name="price" placeholder="値段を入力" value="{{ old('price')}}">
+                            <input class="form_group-text_price" type="text" name="price" placeholder="値段を入力" value="{{ old('price') }}">
                         </div>
                         <div class="form_error">
                             @error('price')
@@ -83,7 +83,7 @@
                 <p class="form_group-title">商品説明</p>
                 <div class="form_group-content">
                     <div class="form_group-text">
-                        <textarea class="form_group-text_description" name="description" placeholder="商品説明を入力" value="{{ old('description') }}" rows="10" cols="110"></textarea>
+                        <textarea class="form_group-text_description" name="description" placeholder="商品説明を入力" rows="10" cols="110">{{ old('description') }}</textarea>
                     </div>
                     <div class="form_error">
                         @error('description')
@@ -95,7 +95,8 @@
         </div>
         <div class="form_button">
             <button class="form__button-back" type="button" onClick="history.back()">戻る</button>
-            <button class="form__button-submit" type="submit">更新</button>
+            <button class="form__button-update" type="submit" name="send" value="update">変更を保存</button>
+            <button class="form__button-delete" type="submit" name="send" value="delete">削除</button>
         </div>
     </div>
     </form>

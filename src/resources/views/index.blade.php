@@ -22,16 +22,18 @@
                 <!-- 並び替えボタンの設置 -->
         </div>
         <div class="products_content-main">
-            
             @foreach($products as $products)
-            <div class="products_item">
-                    <p class="products_item-image">{{$products->image}}</p>
+            <a class="products_heading_update" href="/products/{productId}">
+                <div class="products_item">
+                    <img class="products_item-image" src="{{$products['image']}}" alt="画像なし">
                     <div class="products_item-content">
-                        <p class="products_item-name">{{$products->name}}</p>                    
-                        <p class="products_item-price">￥{{$products->price}}</p>
+                        <p class="products_item-name">{{$products['name']}}</p>                    
+                        <p class="products_item-price">￥{{$products['price']}}</p>
                     </div>
-            </div>
+                </div>
+            </a>
             @endforeach
+            
         </div>
     </div>
 </div>
