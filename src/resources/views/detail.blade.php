@@ -10,9 +10,10 @@
     @csrf
     <div class="form_frame">
             <p>
-                <span class="products_heading_logo">商品一覧</span>
+                <a class="products_heading_logo" href="/products">商品一覧</a>
                 <span class="products_heading_logo-a">></span>
             </p>
+            
         <div class="products_detail-content">
             <div class="products_detail_image">
                 <div class="form_group">
@@ -31,10 +32,11 @@
             </div>
             <div class="products_detail-information">
                 <div class="form_group">
+                    <input type="hidden" id="id" value="{{ old('id') }}">
                     <p class="form_group-title">商品名</p>
                     <div class="form_group-content">
                         <div class="form_group-text">
-                            <input class="form_group-text_name" type="text" name="name" placeholder="商品名を入力" value="{{ old('name') }}">
+                            <input class="form_group-text_name" type="text" name="name" placeholder="商品名を入力" value="{{ old('name') }}"> 
                         </div>
                         <div class="form_error">
                             @error('name')
@@ -96,7 +98,7 @@
         <div class="form_button">
             <button class="form__button-back" type="button" onClick="history.back()">戻る</button>
             <button class="form__button-update" type="submit" name="send" value="update">変更を保存</button>
-            <button class="form__button-delete" type="submit" name="send" value="delete">削除</button>
+            <button class="form__button-delete">削除</button>
         </div>
     </div>
     </form>

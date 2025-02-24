@@ -68,8 +68,8 @@
                     <span class="form__label--message">複数選択可</span>
                 </div>
                 <div class="form_group-content">
-                    <div class="form_group-text_seasons">
-                        <input type="checkbox" name="season" value="1">
+                    <div class="form_group-text_seasons" name="season_name">
+                            <input type="checkbox" name="season" value="1">
                             <label class="form_group-text_seasons-label" for="spring" name="season" value="春">春</label>
                             <input type="checkbox" name="season" value="2">
                             <label class="form_group-text_seasons-label" for="summer" name="season" value="夏">夏</label>

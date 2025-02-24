@@ -17,14 +17,14 @@
                 <form class="products_content_search" action="/products/search" method="post">
                     @csrf
                     <input class="products_content_search-input" type="text" name="search" placeholder="商品名で検索">
-                    <button class="products_content_search-button" type="submit" name="submit" >検索</search>
+                    <button class="products_content_search-button" type="submit" name="submit" >検索</button>
                 </form>
-                <!-- 並び替えボタンの設置 -->
         </div>
         <div class="products_content-main">
             @foreach($products as $products)
             <a class="products_heading_update" href="/products/{productId}">
                 <div class="products_item">
+                    <input type="hidden" id="id" value="{{$products['id']}}">
                     <img class="products_item-image" src="{{$products['image']}}" alt="画像なし">
                     <div class="products_item-content">
                         <p class="products_item-name">{{$products['name']}}</p>                    
@@ -33,7 +33,6 @@
                 </div>
             </a>
             @endforeach
-            
         </div>
     </div>
 </div>

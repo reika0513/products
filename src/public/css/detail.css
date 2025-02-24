@@ -5,6 +5,7 @@
 }
 
 .products_heading_logo{
+    text-decoration: none;
     color: #0085FF;
 }
 
@@ -111,6 +112,7 @@ input[type=checkbox]:checked+.label_test:before {
 }
 
 .form__button-delete{
+    margin-left: 80px;
     color: red;
     font-weight: bold;
     background-color: #ffffff00;
