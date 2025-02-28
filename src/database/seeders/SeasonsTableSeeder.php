@@ -13,21 +13,6 @@ class SeasonsTableSeeder extends Seeder
      */
     public function run()
     {
-        $seasons = [
-        'name' => '春',
-        ];
-        DB::table('seasons')->insert($seasons);
-        $seasons = [
-        'name' => '夏',
-        ];
-        DB::table('seasons')->insert($seasons);
-        $seasons = [
-        'name' => '秋',
-        ];
-        DB::table('seasons')->insert($seasons);
-        $seasons = [
-        'name' => '冬',
-        ];
-        DB::table('seasons')->insert($seasons);
+
     }
 }
